@@ -21,6 +21,9 @@ pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 #st.stop()
 
+# Convert the Fruit_Name column to a list for use in st.multiselect
+fruit_list = pd_df['FRUIT_NAME'].tolist()
+
 ingredients_list = st.multiselect (
 'Choose up to 5 ingredients:'
 , my_dataframe
